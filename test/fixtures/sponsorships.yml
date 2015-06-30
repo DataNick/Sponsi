@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sport: MyString
+  level: 1
+  description: MyText
+  user_id: 
+
+two:
+  sport: MyString
+  level: 1
+  description: MyText
+  user_id: 

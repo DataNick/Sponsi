@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sponsorships
+
   devise_for :users
   resources :applications
 
