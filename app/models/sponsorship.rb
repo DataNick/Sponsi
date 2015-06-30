@@ -1,5 +1,5 @@
 class Sponsorship < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :user #Admin
   has_many :rewards
-  has_many :applications through: :rewards
+  has_many :applications
 end

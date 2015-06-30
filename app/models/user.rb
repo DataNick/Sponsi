@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :applications
-  has_many :rewards, through: :applications
-  has_many :sponsorships
+  has_one :application
+  has_many :rewards, through: :sponsorship
+  has_many :sponsorships #Admin
 
 end
