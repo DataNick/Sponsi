@@ -18,7 +18,7 @@
       <td><%= application.sport %></td>
       <td><%= application.rank %></td>
       <td><%= application.user.first_name  %></td>
-      <% if application.user == current_user %>
+      <% if application.user == current_user || current_user.admin? %>
       <td><%= link_to 'Show', application %></td>
       <td><%= link_to 'Edit', edit_application_path(application) %></td>
       <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>

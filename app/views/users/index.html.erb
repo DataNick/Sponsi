@@ -1,0 +1,29 @@
+
+<h1>Manage Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Admin Status</th>
+      <th>Make Admin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %> <%= user.last_name %></td>
+      <td><%= user.admin %></td>
+      <td>
+        <button> </button>
+      </td>
+      <td>
+        <button> </button>
+      </td>
+
+      </tr>
+      <% end %>
+    </tbody>
+  </table>

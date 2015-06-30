@@ -21,7 +21,7 @@ class ApplicationsController < ApplicationController
   def new
     # @application = Application.new
     # respond_with(@application)
-    @application = current_user.application.build
+    @application = current_user.applications.build
   end
 
   # GET /applications/1/edit
@@ -33,7 +33,7 @@ class ApplicationsController < ApplicationController
   def create
     # @application = Application.create(application_params)
 
-    @application = current_user.application.build(application_params)
+    @application = current_user.applications.build(application_params)
 
     respond_to do |format|
       if @application.save
