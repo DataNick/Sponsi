@@ -1,6 +1,7 @@
 class Application < ActiveRecord::Base
 
-belongs_to :user
+belongs_to :users
+belongs_to :sponsorships
 
 
 end

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   :recoverable, :rememberable, :trackable, :validatable
 
   has_many :applications
-
+  has_many :rewards, through: :applications
+  has_many :sponsorships
 
 end

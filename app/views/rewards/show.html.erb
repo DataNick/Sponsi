@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number of goods:</strong>
+  <%= @reward.number_of_goods %>
+</p>
+
+<p>
+  <strong>Good:</strong>
+  <%= @reward.good %>
+</p>
+
+<p>
+  <strong>Sponsorship:</strong>
+  <%= @reward.sponsorship_id %>
+</p>
+
+<%= link_to 'Edit', edit_reward_path(@reward) %> |
+<%= link_to 'Back', rewards_path %>

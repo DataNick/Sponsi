@@ -1,0 +1,29 @@
+<%= form_for(@reward) do |f| %>
+  <% if @reward.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reward.errors.count, "error") %> prohibited this reward from being saved:</h2>
+
+      <ul>
+      <% @reward.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number_of_goods %><br>
+    <%= f.number_field :number_of_goods %>
+  </div>
+  <div class="field">
+    <%= f.label :good %><br>
+    <%= f.text_field :good %>
+  </div>
+  <div class="field">
+    <%= f.label :sponsorship_id_id %><br>
+    <%= f.text_field :sponsorship_id_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
