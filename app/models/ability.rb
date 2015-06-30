@@ -10,7 +10,9 @@ class Ability
         can :manage, :all
       else
         can :create, Application
-        can :read, :all
+        can :read, Application
+        can :read, Sponsorship
+        can :read, Reward
       end
     #
     # The first argument to `can` is the action you are giving the user

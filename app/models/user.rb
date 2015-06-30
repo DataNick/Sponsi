@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   :recoverable, :rememberable, :trackable, :validatable
 
   has_one :application
-  has_many :rewards, through: :sponsorship
+  has_many :rewards, through: :sponsorships
   has_many :sponsorships #Admin
 
 end

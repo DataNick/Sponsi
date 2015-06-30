@@ -14,11 +14,14 @@ class ApplicationsController < ApplicationController
   # GET /applications/1
   # GET /applications/1.json
   def show
+    @application = Application.find(params[:id])
   end
 
   # GET /applications/new
   def new
-    @application = current_user.applications.build
+    # @application = Application.new
+    # respond_with(@application)
+    @application = current_user.application.build
   end
 
   # GET /applications/1/edit
@@ -28,7 +31,9 @@ class ApplicationsController < ApplicationController
   # POST /applications
   # POST /applications.json
   def create
-    @application = current_user.applications.build(application_params)
+    # @application = Application.create(application_params)
+
+    @application = current_user.application.build(application_params)
 
     respond_to do |format|
       if @application.save
