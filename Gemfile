@@ -32,7 +32,9 @@ gem 'pry-rails', :group => :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
+# sending email
 
+gem 'mailcatcher', '~> 0.6.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
