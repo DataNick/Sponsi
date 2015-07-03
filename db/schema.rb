@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701205712) do
+ActiveRecord::Schema.define(version: 20150703175229) do
 
   create_table "applications", force: true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150701205712) do
     t.integer  "sponsorship_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "application_id"
   end
 
   add_index "rewards", ["sponsorship_id"], name: "index_rewards_on_sponsorship_id"
