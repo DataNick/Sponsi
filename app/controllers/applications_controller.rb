@@ -3,6 +3,7 @@ class ApplicationsController < ApplicationController
   #Requires Being Signed in to View the Following
   before_action :authenticate_user!, except:[:index, :show]
   #Enables CanCan's User settings
+  before_action :get_sponsorship
   load_and_authorize_resource
 
   # GET /applications
@@ -34,7 +35,7 @@ class ApplicationsController < ApplicationController
     # @application = Application.create(application_params)
 
     @application = current_user.applications.build(application_params)
-
+    @application.sponsorship_id = @sponsorship.id
     if @application.save
       redirect_to sponsorships_path, notice: 'Application created successfully'
     else
@@ -67,6 +68,10 @@ class ApplicationsController < ApplicationController
   end
 
   private
+
+    def get_sponsorship
+      @sponsorship = Sponsorship.find(params[:sponsorship_id])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_application
       @application = Application.find(params[:id])
