@@ -10,7 +10,7 @@ class SponsorshipsController < ApplicationController
 
   def show
     @sponsorship = Sponsorship.find(params[:id])
-    # @application = @sponsorship.applications.build
+    @application = @sponsorship.applications.build
   end
 
   def new
