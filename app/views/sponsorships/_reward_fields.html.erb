@@ -1,0 +1,12 @@
+<div class="nested-fields">
+  <div class="field">
+    <%= f.label :number_of_goods %><br>
+    <%= f.number_field :number_of_goods %>
+  </div>
+  <div class="field">
+    <%= f.label :good %><br>
+    <%= f.text_field :good %>
+  </div>
+
+  <%= link_to_remove_association "remove reward", f %>
+</div>

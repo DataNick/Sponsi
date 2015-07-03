@@ -9,21 +9,28 @@ class SponsorshipsController < ApplicationController
   end
 
   def show
-    respond_with(@sponsorship)
+    @sponsorship = Sponsorship.find(params[:id])
+    # @application = @sponsorship.applications.build
   end
 
   def new
     @sponsorship = Sponsorship.new
-    respond_with(@sponsorship)
+    @sponsorship.rewards.new
+    # respond_with(@sponsorship)
   end
 
   def edit
+    @sponsorship = Sponsorship.find(params[:id])
   end
 
   def create
+
     @sponsorship = Sponsorship.new(sponsorship_params)
-    @sponsorship.save
-    respond_with(@sponsorship)
+    if @sponsorship.save
+      respond_with(@sponsorship)
+    else
+      render :new
+    end
   end
 
   def update
@@ -42,6 +49,6 @@ class SponsorshipsController < ApplicationController
     end
 
     def sponsorship_params
-      params.require(:sponsorship).permit(:sport, :level, :description, :user_id)
+      params.require(:sponsorship).permit(:sport, :level, :description, :user_id, rewards_attributes: [:good, :number_of_goods, :_destroy])
     end
 end

@@ -1,34 +1,8 @@
 class RewardsController < ApplicationController
-  before_action :set_reward, only: [:show, :edit, :update, :destroy]
-
-  respond_to :html
-
-  def index
-    @rewards = Reward.all
-    respond_with(@rewards)
-  end
-
-  def show
-    respond_with(@reward)
-  end
-
-  def new
-    @reward = Reward.new
-    respond_with(@reward)
-  end
-
-  def edit
-  end
+  before_filter :load_sponsorship
 
   def create
-    @reward = Reward.new(reward_params)
-    @reward.save
-    respond_with(@reward)
-  end
-
-  def update
-    @reward.update(reward_params)
-    respond_with(@reward)
+    @reward = @sponsorship.rewards.build(reward_params)
   end
 
   def destroy
@@ -37,11 +11,12 @@ class RewardsController < ApplicationController
   end
 
   private
-    def set_reward
-      @reward = Reward.find(params[:id])
-    end
 
     def reward_params
-      params.require(:reward).permit(:number_of_goods, :good, :sponsorship_id_id)
+      params.require(:reward).permit(:number_of_goods, :good, :sponsorship_id)
+    end
+
+    def load_sponsorship
+      @sponsorship = Sponsorship.find(params[:sponsorship_id])
     end
 end

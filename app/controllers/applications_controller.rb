@@ -35,14 +35,10 @@ class ApplicationsController < ApplicationController
 
     @application = current_user.applications.build(application_params)
 
-    respond_to do |format|
-      if @application.save
-        format.html { redirect_to @application, notice: 'Application was successfully created.' }
-        format.json { render :show, status: :created, location: @application }
-      else
-        format.html { render :new }
-        format.json { render json: @application.errors, status: :unprocessable_entity }
-      end
+    if @application.save
+      redirect_to sponsorships_path, notice: 'Application created successfully'
+    else
+      render 'user/application'
     end
   end
 

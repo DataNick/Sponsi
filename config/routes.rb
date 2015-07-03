@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   get 'users/index'
 
-  resources :rewards
 
-  resources :sponsorships
+  #Changed Routes tot work with Cocoon
+  resources :sponsorships do
+    resources :applications, only: [:create, :new, :destroy]
+    resources :rewards, only: [:create, :destroy]
+  end
 
   devise_for :users
-  resources :applications
 
   resources :users, only: [:edit, :update, :index, :show]
 

@@ -43,3 +43,4 @@ gem 'mailcatcher', '~> 0.6.1'
 
 gem 'devise', '~> 3.4.1'
 gem 'cancancan'
+gem 'cocoon'
