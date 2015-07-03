@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Sponsorship:</h1>
+
 <p>
   <strong>Sport:</strong>
   <%= @sponsorship.sport %>
@@ -19,6 +21,17 @@
   <strong>User:</strong>
   <%= @sponsorship.user %>
 </p>
+
+<h2>Rewards</h2>
+
+<% @sponsorship.rewards.each do |reward| %>
+<p>
+  <%= reward.good %><br/>
+  <%= reward.number_of_goods %><br/>
+<% end %>
+
+
+
 
 <%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |
 <%= link_to 'Back', sponsorships_path %>
