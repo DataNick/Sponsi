@@ -1,6 +1,6 @@
 class SponsorshipsController < ApplicationController
   before_action :set_sponsorship, only: [:show, :edit, :update, :destroy]
-
+  # before_action :get_sponsorship
   respond_to :html
 
   def index
@@ -24,13 +24,19 @@ class SponsorshipsController < ApplicationController
   end
 
   def create
-
-    @sponsorship = Sponsorship.new(sponsorship_params)
+    @sponsorship = current_user.sponsorships.build(sponsorship_params)
+    @sponsorship.user_id = current_user.id
     if @sponsorship.save
       respond_with(@sponsorship)
     else
       render :new
     end
+    # @sponsorship = Sponsorship.new(sponsorship_params)
+    # if @sponsorship.save
+    #   respond_with(@sponsorship)
+    # else
+    #   render :new
+    # end
   end
 
   def update
@@ -44,6 +50,12 @@ class SponsorshipsController < ApplicationController
   end
 
   private
+
+  # def get_sponsorship
+  #   @sponsorship = Sponsorship.find(params[:sponsorship_id])
+  # end
+  # Use callbacks to share common setup or constraints between actions.
+
     def set_sponsorship
       @sponsorship = Sponsorship.find(params[:id])
     end
