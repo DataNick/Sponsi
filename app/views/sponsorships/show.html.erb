@@ -19,7 +19,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @sponsorship.user %>
+  <%= @sponsorship.user.first_name %>
 </p>
 
 <h2>Rewards</h2>
@@ -32,10 +32,12 @@
 
 
 
-
+<% if can?(:edit, Sponsorship) %>
 <%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |
+<% end %>
 <%= link_to 'Back', sponsorships_path %>
 
+<% if current_user.admin == false %>
 <h2>Apply here</h2>
 <%= form_for [@sponsorship, @application] do |f| %>
   <div class='field'>
@@ -54,4 +56,5 @@
   <div class='actions'>
     <%= f.submit %>
   </div>
+  <% end %>
   <% end %>

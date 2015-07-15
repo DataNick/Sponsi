@@ -13,19 +13,24 @@
 
   <tbody>
     <% @sponsorships.each do |sponsorship| %>
+      <% if current_user.admin == true && current_user.id == sponsorship.user.id %>
       <tr>
         <td><%= sponsorship.sport %></td>
         <td><%= sponsorship.level %></td>
         <td><%= sponsorship.description %></td>
-        <td><%= sponsorship.user %></td>
+        <td><%= sponsorship.user.first_name %></td>
         <td><%= link_to 'Show', sponsorship %></td>
+         <% if current_user.admin == true  %>
         <td><%= link_to 'Edit', edit_sponsorship_path(sponsorship) %></td>
         <td><%= link_to 'Destroy', sponsorship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if current_user.admin == true %>
 <%= link_to 'New Sponsorship', new_sponsorship_path %>
+<% end %>
