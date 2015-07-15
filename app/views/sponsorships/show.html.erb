@@ -31,6 +31,29 @@
 <% end %>
 
 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rank</th>
+      <th>Sport</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sponsorship.applications.each do |application| %>
+     
+      <tr>
+        <td><%= application.name %></td>
+        <td><%= application.rank %></td>
+        <td><%= application.sport %></td>
+      </tr>
+     
+    <% end %>
+  </tbody>
+</table>
+
 
 <% if can?(:edit, Sponsorship) %>
 <%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |

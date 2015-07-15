@@ -13,7 +13,7 @@
 
   <tbody>
     <% @sponsorships.each do |sponsorship| %>
-      <% if current_user.admin == true && current_user.id == sponsorship.user.id %>
+      <% if current_user.admin == true && current_user.id == sponsorship.user.id || current_user.admin == false %> 
       <tr>
         <td><%= sponsorship.sport %></td>
         <td><%= sponsorship.level %></td>
