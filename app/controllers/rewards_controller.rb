@@ -13,14 +13,14 @@ class RewardsController < ApplicationController
     redirect_to sponsorship_path(@sponsorship), notice: 'Review was deleted'
   end
 
-  def update
-    @reward = @sponsorship.reward(params[:id])
-    if @reward.update_attributes(reward_params)
-      respond_with(@sponsorshop)
-    else
-      render 'edit'
-    end
-  end
+  # def update
+  #   @reward = @sponsorship.reward(params[:id])
+  #   if @reward.update_attributes(reward_params)
+  #     respond_with(@sponsorshop)
+  #   else
+  #     render 'edit'
+  #   end
+  # end
 
   private
 

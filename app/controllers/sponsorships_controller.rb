@@ -65,6 +65,6 @@ class SponsorshipsController < ApplicationController
     end
 
     def sponsorship_params
-      params.require(:sponsorship).permit(:sport, :level, :description, :user_id, rewards_attributes: [:good, :number_of_goods, :_destroy])
+      params.require(:sponsorship).permit(:sport, :level, :description, :user_id, rewards_attributes: [:id, :good, :number_of_goods, :_destroy])
     end
 end
