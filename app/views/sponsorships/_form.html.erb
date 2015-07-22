@@ -1,5 +1,6 @@
 <%= form_for(@sponsorship) do |f| %>
 <% if @sponsorship.errors.any? %>
+
 <div id="error_explanation">
   <h2><%= pluralize(@sponsorship.errors.count, "error") %> prohibited this sponsorship from being saved:</h2>
 

@@ -40,8 +40,12 @@ class SponsorshipsController < ApplicationController
   end
 
   def update
-    @sponsorship.update(sponsorship_params)
-    respond_with(@sponsorship)
+    @sponsorship = Sponsorship.find(params[:id])
+    if @sponsorship.update_attributes(sponsorship_params)
+      respond_with(@sponsorship)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
