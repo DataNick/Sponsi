@@ -31,35 +31,13 @@
 <% end %>
 
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Rank</th>
-      <th>Sport</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sponsorship.applications.each do |application| %>
-     
-      <tr>
-        <td><%= application.name %></td>
-        <td><%= application.rank %></td>
-        <td><%= application.sport %></td>
-      </tr>
-     
-    <% end %>
-  </tbody>
-</table>
-
-
-<% if can?(:edit, Sponsorship) %>
-<%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |
+<!-- Link to Applications -->
+<% if can?(:destroy, Application) %>
+<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id) %>
 <% end %>
-<%= link_to 'Back', sponsorships_path %>
 
+
+<!-- Apply for Sponsorship Feilds -->
 <% if current_user.admin == false %>
 <h2>Apply here</h2>
 <%= form_for [@sponsorship, @application] do |f| %>
@@ -81,3 +59,11 @@
   </div>
   <% end %>
   <% end %>
+
+
+
+<!-- Navigation -->
+<% if can?(:edit, Sponsorship) %>
+<%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |
+<% end %>
+<%= link_to 'Back', sponsorships_path %>

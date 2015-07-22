@@ -15,5 +15,5 @@
   <%= @application.rank %>
 </p>
 
-<%= link_to 'Edit', edit_application_path(@application) %> |
-<%= link_to 'Back', applications_path %>
+<%= link_to 'Edit', edit_sponsorship_application_path(@application.sponsorship_id, @application.id) %> |
+<%= link_to 'Back', sponsorship_applications_path %>

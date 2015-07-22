@@ -1,5 +1,5 @@
-<%= form_for(@sponsorship.applications) do |f| %>
-  <% if @sponsorship.application.errors.any? %>
+<%= form_for(sponsorship_application_path(@application.sponsorship_id, @application.id)) do |f| %>
+  <% if @application.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sponsorship.application.errors.count, "error") %> prohibited this application from being saved:</h2>
 
@@ -23,6 +23,15 @@
     <%= f.label :rank %><br>
     <%= f.number_field :rank %>
   </div>
+  <div class="field">
+    <%= f.label :approval %><br>
+    <%= f.radio_button(:approval, true) %>
+    <%= label_tag(:approval_true, "Give Player Sponsorship") %>
+    <%= f.radio_button(:approval, false) %>
+    <%= label_tag(:approval_false, "Remove Sponsorship") %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

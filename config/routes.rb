@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   #Changed Routes tot work with Cocoon
   resources :sponsorships do
-    resources :applications, only: [:create, :new, :destroy]
+    resources :applications
     resources :rewards, only: [:create, :destroy]
   end
 

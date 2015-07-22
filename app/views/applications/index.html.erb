@@ -1,5 +1,6 @@
-<h1>Listing applications</h1>
+<h1>Pending applications</h1>
 
+<% if current_user.admin == true && @sponsorship.user_id == current_user.id %>
 <table>
   <thead>
     <tr>
@@ -12,16 +13,15 @@
   </thead>
 
   <tbody>
-    <% @applications.each do |application| %>
+    <% @sponsorship.applications.each do |application| %>
     <tr>
       <td><%= application.name %></td>
       <td><%= application.sport %></td>
       <td><%= application.rank %></td>
       <td><%= application.user.first_name  %></td>
-      <% if application.user == current_user  %>
-      <td><%= link_to 'Show', application %></td>
-      <td><%= link_to 'Edit', edit_application_path(application) %></td>
-      <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', sponsorship_application_path(application.sponsorship_id, application.id) %></td>
+      <td><%= link_to 'Edit', edit_sponsorship_application_path(application.sponsorship_id, application.id) %></td>
+      <td><%= link_to 'Destroy', sponsorship_application_path(application.sponsorship_id, application.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tr>
     <% end %>
@@ -30,6 +30,3 @@
 
 <br>
 
-<% if can?(:create, Application) %>
-<%= link_to 'New Application', new_application_path %>
-<% end %>

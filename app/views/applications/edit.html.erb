@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @application %> |
-<%= link_to 'Back', applications_path %>
+<%= link_to 'Show', sponsorship_application_path(@application.sponsorship_id, @application.id) %> |
+<%= link_to 'Back', sponsorship_applications_path(@sponsorship.id) %>
