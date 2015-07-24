@@ -1,6 +1,7 @@
+<% if current_user.admin == true && @sponsorship.user_id == current_user.id %>
+
 <h1>Pending applications</h1>
 
-<% if current_user.admin == true && @sponsorship.user_id == current_user.id %>
 <table>
   <thead>
     <tr>
@@ -14,19 +15,49 @@
 
   <tbody>
     <% @sponsorship.applications.each do |application| %>
+    <% if application.approval == false %>
     <tr>
       <td><%= application.name %></td>
       <td><%= application.sport %></td>
       <td><%= application.rank %></td>
       <td><%= application.user.first_name  %></td>
       <td><%= link_to 'Show', sponsorship_application_path(application.sponsorship_id, application.id) %></td>
-      <td><%= link_to 'Edit', edit_sponsorship_application_path(application.sponsorship_id, application.id) %></td>
       <td><%= link_to 'Destroy', sponsorship_application_path(application.sponsorship_id, application.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tr>
-    <% end %>
+
   </tbody>
 </table>
 
 <br>
 
+<h1>Approved applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sport</th>
+      <th>Rank</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sponsorship.applications.each do |application| %>
+    <% if application.approval == true %>
+    <tr>
+      <td><%= application.name %></td>
+      <td><%= application.sport %></td>
+      <td><%= application.rank %></td>
+      <td><%= application.user.first_name  %></td>
+      <td><%= link_to 'Show', sponsorship_application_path(application.sponsorship_id, application.id) %></td>
+      <td><%= link_to 'Destroy', sponsorship_application_path(application.sponsorship_id, application.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
+
+  </tbody>
+</table>
+
+<% end %>
