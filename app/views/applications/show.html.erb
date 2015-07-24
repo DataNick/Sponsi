@@ -23,16 +23,30 @@
   <%= reward.good %><br/>
   <%= reward.number_of_goods %><br/>
 
+  <% if @application.approval == false  %>
   <%= form_for ([@sponsorship, @application]) do |f| %>
   <%= f.hidden_field :approval, value: true %>
   <div class="actions">
     <%= f.submit "Sponsor Player", class:"submit-button", data: {disable_with: "Submitting..."} %>
   </div>
   <% end %>
+  <% end %>
+
+  <% if @application.approval == true %>
+  <%= form_for ([@sponsorship, @application]) do |f| %>
+  <%= f.hidden_field :approval, value: false %>
+  <div class="actions">
+    <%= f.submit "Remove sponsorship", class:"submit-button", data: {disable_with: "Submitting..."} %>
+  </div>
+  <% end %>
+  <% end %>
+
+
 <% end %>
 
 
-<%= link_to 'Back', sponsorship_applications_path %>
+
+<%= link_to 'Back', sponsorship_applications_path %> | <%= link_to 'Destroy', sponsorship_application_path(@sponsorship.id, @application.id), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <% end  %>
 
