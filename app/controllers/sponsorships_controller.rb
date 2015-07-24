@@ -11,6 +11,7 @@ class SponsorshipsController < ApplicationController
   def show
     @sponsorship = Sponsorship.find(params[:id])
     @application = @sponsorship.applications.build
+    @current_user_sponsorships_applied_to = []
   end
 
   def new

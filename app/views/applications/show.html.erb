@@ -15,11 +15,11 @@
   <%= @application.rank %>
 </p>
 
-
-<p>
+<!-- Admin give sponsorship buttons -->
+<% if current_user.admin == true && @application.sponsorship.user_id == current_user.id %>
 
 <% @sponsorship.rewards.each do |reward| %>
-<p>
+
   <%= reward.good %><br/>
   <%= reward.number_of_goods %><br/>
 
@@ -29,9 +29,13 @@
     <%= f.submit "Sponsor Player", class:"submit-button", data: {disable_with: "Submitting..."} %>
   </div>
   <% end %>
-</p>
 <% end %>
 
-</p>
 <%= link_to 'Edit', edit_sponsorship_application_path(@application.sponsorship_id, @application.id) %> |
 <%= link_to 'Back', sponsorship_applications_path %>
+
+<% end  %>
+
+<% if current_user.admin == false %>
+<%= link_to 'View Sponsponsorship', sponsorship_path(@sponsorship.id) %>
+<% end %>

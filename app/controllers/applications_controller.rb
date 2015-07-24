@@ -64,7 +64,7 @@ class ApplicationsController < ApplicationController
   def destroy
     @application.destroy
     respond_to do |format|
-      format.html { redirect_to applications_url, notice: 'Application was successfully destroyed.' }
+      format.html { redirect_to sponsorship_applications_url, notice: 'Application was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

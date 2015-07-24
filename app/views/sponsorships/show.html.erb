@@ -38,7 +38,13 @@
 
 
 <!-- Apply for Sponsorship Feilds -->
-<% if current_user.admin == false %>
+
+<% current_user.applications.each do |application|
+   @current_user_sponsorships_applied_to.push(application.sponsorship_id)
+end
+ %>
+
+<% if current_user.admin == false &&  @current_user_sponsorships_applied_to.include?(@sponsorship.id) == false %>
 <h2>Apply here</h2>
 <%= form_for [@sponsorship, @application] do |f| %>
   <div class='field'>
@@ -58,8 +64,16 @@
     <%= f.submit %>
   </div>
   <% end %>
+
+<% elsif current_user.admin == false &&  @current_user_sponsorships_applied_to.include?(@sponsorship.id) == true %>
+  <% current_user.applications.each do |application|
+    if application.sponsorship_id == @sponsorship.id
+    %>
+    <%= link_to 'View Your Application', sponsorship_application_path(application.sponsorship_id, application.id) %>
+    <% end %>
   <% end %>
 
+<% end %>
 
 
 <!-- Navigation -->
