@@ -15,5 +15,23 @@
   <%= @application.rank %>
 </p>
 
+
+<p>
+
+<% @sponsorship.rewards.each do |reward| %>
+<p>
+  <%= reward.good %><br/>
+  <%= reward.number_of_goods %><br/>
+
+  <%= form_for ([@sponsorship, @application]) do |f| %>
+  <%= f.hidden_field :approval, value: true %>
+  <div class="actions">
+    <%= f.submit "Sponsor Player", class:"submit-button", data: {disable_with: "Submitting..."} %>
+  </div>
+  <% end %>
+</p>
+<% end %>
+
+</p>
 <%= link_to 'Edit', edit_sponsorship_application_path(@application.sponsorship_id, @application.id) %> |
 <%= link_to 'Back', sponsorship_applications_path %>

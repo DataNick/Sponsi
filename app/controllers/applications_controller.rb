@@ -1,4 +1,6 @@
 class ApplicationsController < ApplicationController
+  respond_to :html, :xml, :json
+
   before_action :set_application, only: [:show, :edit, :update, :destroy]
   #Requires Being Signed in to View the Following
   before_action :authenticate_user!, except:[:index, :show]
@@ -49,7 +51,9 @@ class ApplicationsController < ApplicationController
   def update
     @application = @sponsorship.applications.find(params[:id])
     if @application.update_attributes(application_params)
-      respond_with(@application)
+      respond_to do |format|
+      format.html { redirect_to sponsorship_applications_path, notice: "Application was successfully Sponsi'd" }
+    end
     else
       render 'edit'
     end
