@@ -13,6 +13,7 @@ class Ability
         can :read, Application
         can :read, Sponsorship
         can :read, Reward
+        can :read, User
       end
     #
     # The first argument to `can` is the action you are giving the user

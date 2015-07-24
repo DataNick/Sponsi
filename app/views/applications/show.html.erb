@@ -23,7 +23,9 @@
   <%= reward.good %><br/>
   <%= reward.number_of_goods %><br/>
 
-  <% if @application.approval == false  %>
+<% end %>
+
+<% if @application.approval == false  %>
   <%= form_for ([@sponsorship, @application]) do |f| %>
   <%= f.hidden_field :approval, value: true %>
   <div class="actions">
@@ -40,9 +42,6 @@
   </div>
   <% end %>
   <% end %>
-
-
-<% end %>
 
 
 

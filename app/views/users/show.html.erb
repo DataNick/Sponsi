@@ -13,16 +13,41 @@
   <%= @user.admin? %>
 </p>
 
-<% @user.applications.each do |application| %>
-	<p><%= application.name %></p>
-		<p><%= application.sponsorship.sport%></p>
-		<% application.sponsorship.rewards.each do |reward| %>
-			<li><%= reward.good %>:
-			<%= reward.number_of_goods %></li>
-	<%end%>
-	<%end%>
+
+<% if @user.admin == false %>
+  <% @user.applications.each do |application| %>
+    <% if application.approval == true %>
+      <h2><%= application.name %></h2>
+		  <h3><%= application.sponsorship.sport%></h3>
+		    <% application.sponsorship.rewards.each do |reward| %>
+          <ul>
+			       <li><%= reward.good %>: <%= reward.number_of_goods %></li>
+          </ul>
+	     <%end%>
+	   <%end%>
+  <% end %>
+<% end %>
+
+
+<% if @user.admin == true  %>
+  <h1>Company's Avalible Sponsorships</h1>
+  <% @user.sponsorships.each do |sponsorship| %>
+    <h2><%= sponsorship.sport %>: Level <%= sponsorship.level  %></h2>
+    <p><% sponsorship.description %></p>
+    <h3>Rewards</h3>
+      <ul>
+        <% sponsorship.rewards.each do |reward| %>
+           <li> <%= reward.good %>: <%= reward.number_of_goods %> </li>
+        <% end %>
+      </ul>
+
+
+  <% end %>
+<% end %>
 
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if current_user.id == @user.id %>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+<% end %>
 <%= link_to 'Back', users_path %>
