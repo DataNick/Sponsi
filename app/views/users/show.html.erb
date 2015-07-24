@@ -13,5 +13,16 @@
   <%= @user.admin? %>
 </p>
 
+<% @user.applications.each do |application| %>
+	<p><%= application.name %></p>
+		<p><%= application.sponsorship.sport%></p>
+		<% application.sponsorship.rewards.each do |reward| %>
+			<li><%= reward.good %>:
+			<%= reward.number_of_goods %></li>
+	<%end%>
+	<%end%>
+
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

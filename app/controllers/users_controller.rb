@@ -5,8 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @application = @user.applications.build
-    @reward = @user.rewards.build
+
   end
 
   def edit
