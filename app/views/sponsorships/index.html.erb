@@ -1,4 +1,9 @@
 <h1>Listing sponsorships</h1>
+<%= form_tag sponsorships_path, method: :get, authentication: false, id: 'search-form' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 
 <table>
   <thead>

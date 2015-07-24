@@ -4,7 +4,11 @@ class SponsorshipsController < ApplicationController
   respond_to :html
 
   def index
-    @sponsorships = Sponsorship.all
+    @sponsorships = if params[:search]
+          Sponsorship.where("LOWER(sport) LIKE LOWER(?)", "%#{params[:search]}%")
+        else
+          Sponsorship.all
+        end
     respond_with(@sponsorships)
   end
 
