@@ -1,42 +1,26 @@
 <h2>Sign up!!</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div role="tabpanel">
 
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Athlete Sign Up</a>
+    </li>
+    <li role="presentation">
+      <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Organization Sign Up</a>
+    </li>
+  </ul>
 
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+  <div class="tab-content">
+   <div role="tabpanel" class="tab-pane active" id="tab1">
+    <%= render 'devise/shared/athlete' %>
   </div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+  <div role="tabpanel" class="tab-pane" id="tab2">
+    <%= render 'devise/shared/company' %>
   </div>
 
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+</div>
+</div>
 
 <%= render "devise/shared/links" %>
