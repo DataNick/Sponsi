@@ -43,7 +43,7 @@ color: white;
 .athlete-signin {
   background-image: url("sunset-people-sun-men.jpg");
 	background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -111,4 +111,12 @@ color: white;
   height: auto;
   margin-bottom: 15px;
   padding: 7px 9px;
+}
+
+.notice {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.alert {
+  background-color: :rgba(255,255,255,0.1);
 }
