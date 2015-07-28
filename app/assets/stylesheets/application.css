@@ -13,34 +13,78 @@
  *= require_tree .
  *= require_self
  */
+
+ #title-page {
+  font-family: 'Amaranth', sans-serif;
+  color: #FFFFCC;
+ }
+
+ #welcome-about {
+font-family: 'Roboto', sans-serif;
+color: white;
+
+ }
+
 .modal-content {
 	background-image: url("CZICAIIEUI.jpg");
 	background-size: 100%;
+  background-position: center;
 }
 
 #text-comment-name {
-	width: 300px
+  width: 300px
 }
 
 .company-signin {
 	background-image: url("B1E30E39B7.jpg");
-	background-size: 100%;
+  background-size: cover;
 }
 
 .athlete-signin {
-	background-image: url("L0HIQ8YSOD.jpg");
-	background-size: 100%;
+  background-image: url("sunset-people-sun-men.jpg");
+	background-size: cover;
   background-repeat: no-repeat; 
-  background-size: contain;
+  background-position: center;
 }
 
-.btm-primary {
-	vertical-align: block;
+#user_avatar {
+  color: white;
 }
 
 #pass-length {
 	color: #fff;
 }
+
+#logo-color {
+  color: #fff;
+}
+
+#welcome {
+  text-align: center;
+  display: inline-block;
+  width: 70%;
+  height: auto;
+  margin-left: 15%;
+  margin-right: auto;
+  margin-bottom: 20px;
+  color: gray;
+
+}
+
+.background {
+  background-image: url("7I1KUVZ01H.jpg");
+/*  width: auto;*/
+  /* -webkit-filter: blur(10px);
+    filter: blur(10px);*/
+
+  background-size: cover;
+  max-width:100%;
+  max-height: 100%;
+  background-position: center;
+
+
+}
+
 
 /*twitter bootstrap styling*/
 .border-form-div {
