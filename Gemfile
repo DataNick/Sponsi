@@ -47,4 +47,4 @@ gem 'cocoon'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bourbon'
 gem 'neat'
-gem "paperclip", "~> 4.3"
+gem "paperclip", "~> 4.2"

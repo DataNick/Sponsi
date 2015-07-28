@@ -184,7 +184,7 @@ DEPENDENCIES
   jquery-rails
   mailcatcher (~> 0.6.1)
   neat
-  paperclip (~> 4.3)
+  paperclip (~> 4.2)
   pry-rails
   rails (= 4.1.7)
   sass-rails (~> 4.0.3)
