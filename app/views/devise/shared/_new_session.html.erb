@@ -1,15 +1,15 @@
+<div class="basket">
 <h2>Log in</h2>
-
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, :class => "form-control", autofocus: true %>
+    <%= f.email_field :email, :class => "form-control", :id => "text-comment-name", autofocus: true %>
   </div>
 
   <div class="form-group">
     <%= f.label :password %><br />
-    <%= f.password_field :password, :class => "form-control", autocomplete: "off" %>
+    <%= f.password_field :password, :class => "form-control", :id => "text-comment-name", autocomplete: "off" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -23,3 +23,4 @@
     <%= f.submit class:'btn btn-primary', :value => "Log in" %>
   </div>
 <% end %>
+</div>
