@@ -30,7 +30,8 @@
 .athlete-signin {
 	background-image: url("L0HIQ8YSOD.jpg");
 	background-size: 100%;
-
+  background-repeat: no-repeat; 
+  background-size: contain;
 }
 
 .btm-primary {
