@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+.basket {
+	background-image: url ("CZICAIIEUI.jpg");
+}
