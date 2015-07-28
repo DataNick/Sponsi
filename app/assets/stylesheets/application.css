@@ -18,9 +18,9 @@
 	background-size: 100%;
 }
 
-/*#text-comment-name {
+#text-comment-name {
 	width: 300px
-}*/
+}
 
 .company-signin {
 	background-image: url("B1E30E39B7.jpg");
@@ -28,18 +28,26 @@
 }
 
 .athlete-signin {
-	background-image: url("https://static.pexels.com/photos/1238/sunset-people-sun-men.jpg");
+	background-image: url("L0HIQ8YSOD.jpg");
 	background-size: 100%;
+
 }
 
+.btm-primary {
+	vertical-align: block;
+}
+
+#pass-length {
+	color: #fff;
+}
 
 /*twitter bootstrap styling*/
 .border-form-div {
   max-width: 300px;
   padding: 19px 29px 29px;
   margin: 0 auto 20px;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
+  background-color: rgba(0, 0, 0, 0.5);
+ /* border: 1px solid #e5e5e5;*/
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
