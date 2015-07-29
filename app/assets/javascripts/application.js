@@ -16,3 +16,20 @@
 //= require cocoon
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function() {
+
+
+  $('#hideBox').fadeIn();
+
+
+    $(document).scroll(function () {
+      if ($(this).scrollTop() < $('#hideBox').height()) {
+        $('#hideBox').fadeIn();
+      } else {
+        $('#hideBox').fadeOut();
+      }
+    });
+
+});
+
