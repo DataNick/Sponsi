@@ -102,6 +102,10 @@ outline: none;
   background-image: url("concrete_seamless.png");
 }
 
+.caption {
+  background-color: red;
+}
+
 /*twitter bootstrap styling*/
 .border-form-div {
   max-width: 300px;
