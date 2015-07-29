@@ -1,8 +1,12 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1 class="col-md-12 col-sm-12">Sponsorship</h1>
-
+<h1 class="col-md-12 col-sm-12">Sponsorship for <%=@sponsorship.user.first_name%> <%=@sponsorship.user.last_name%></h1>
+<br>
+<br>
+<br>
+<br>
+<div class="show-spons">
 <p>
   <strong>Sport:</strong>
   <%= @sponsorship.sport %>
@@ -31,7 +35,7 @@
   <%= reward.number_of_goods %><br/>
   </p>
 <% end %>
-
+</div>
 
 <!-- Link to Applications -->
 <% if can?(:destroy, Application) %>
