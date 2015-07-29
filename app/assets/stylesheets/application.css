@@ -71,7 +71,7 @@ color: white;
 
 }
 
-.background {
+#background {
   background-image: url("7I1KUVZ01H.jpg");
 /*  width: auto;*/
   /* -webkit-filter: blur(10px);
@@ -85,6 +85,22 @@ color: white;
 
 }
 
+/*modal box positioning*/
+
+#myModal {
+top:20%;
+right: 5%;
+left: 5%;
+outline: none;
+}
+
+
+
+/*sponsorship index*/
+
+.background-body {
+  background-image: url("concrete_seamless.png");
+}
 
 /*twitter bootstrap styling*/
 .border-form-div {
@@ -114,13 +130,12 @@ color: white;
 }
 
 .notice {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.5);
+  text-align: center;
 }
 
 .alert {
-  background-color: :rgba(255,255,255,0.1);
-}
+  background-color: :rgba(255,255,255,0.5);
+  text-align: center;
 
-.bg-grey{
-  background-color: :rgba(244,244,244);
 }

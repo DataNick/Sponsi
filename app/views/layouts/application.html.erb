@@ -8,7 +8,16 @@
   <link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
-<body class="bg-grey">
+
+
+
+
+<% if user_signed_in? %>
+<body class="background-body">
+<% else %>
+<body id="background">
+<% end %>
+
 
 
 
@@ -36,6 +45,7 @@
  <%= yield %>
 
 <!--  </div> -->
+
 
 
 </body>
