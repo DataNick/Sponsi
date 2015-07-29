@@ -1,13 +1,14 @@
 <div class="nested-fields">
   <div class="field">
-    <%= f.label :number_of_goods %><br>
-    <%= f.number_field :number_of_goods %>
+    <br>
+    <%= f.number_field :number_of_goods, :class => "form-control", :placeholder => "Number of particular good you will supply (use arrow keys)" %>
   </div>
   <div class="field">
-    <%= f.label :good %><br>
-    <%= f.text_field :good %>
+   	<br>
+    <%= f.text_field :good, :class => "form-control", :placeholder => "Type of good you will supply" %>
   </div>
 
-  <%= link_to_remove_association "remove reward", f %>
+  <p><%= link_to_remove_association "remove reward", f, class:'btn btn-danger' %></p>
   
 </div>
+<br/>
