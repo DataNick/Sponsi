@@ -1,6 +1,7 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1>Sponsorship:</h1>
+<h1 class="col-md-12 col-sm-12">Sponsorship</h1>
 
 <p>
   <strong>Sport:</strong>
@@ -22,12 +23,13 @@
   <%= @sponsorship.user.first_name %>
 </p>
 
-<h2>Rewards</h2>
+<h3 id="reward-form-title" class="col-md-12 col-sm-12">Rewards</h3>
 
 <% @sponsorship.rewards.each do |reward| %>
 <p>
   <%= reward.good %><br/>
   <%= reward.number_of_goods %><br/>
+  </p>
 <% end %>
 
 
@@ -80,4 +82,5 @@ end
 <% if can?(:edit, Sponsorship) %>
 <%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |
 <% end %>
+</div>
 <%= link_to 'Back', sponsorships_path %>
