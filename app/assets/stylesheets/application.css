@@ -184,3 +184,29 @@ outline: none;
   text-align: center;
 
 }
+
+.light {
+    font-weight: 400;
+}
+
+
+/* Navbar */
+#hideBox {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  opacity: 0.85;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+#pageTop {
+  margin: 15px 40px 5px 40px;
+  display: inline-block;
+  opacity: 1;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+}
+
+.header-font {
+  font-family: 'Ubuntu'
+}
