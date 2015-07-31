@@ -12,7 +12,24 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require cocoon
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function() {
+
+  $('#hideBox').fadeIn("slow");
+
+    $(document).scroll(function () {
+      if ($(this).scrollTop() < $('#hideBox').height()) {
+        $('#hideBox').fadeIn("slow");
+      } else {
+        $('#hideBox').fadeOut();
+      }
+    });
+
+});
+
+
+//= require turbolinks

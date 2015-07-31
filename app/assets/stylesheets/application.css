@@ -392,6 +392,42 @@ color: #E1F5E1;
 }
 
 .alert {
-  background-color: :rgba(255,255,255,0.1);
+  background-color: :rgba(255,255,255,0.5);
   text-align: center;
+
+}
+
+.bold {
+    font-weight: 800;
+}
+
+
+/* Navbar */
+#hideBox {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  opacity: 0.85;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+#pageTop {
+  margin: 15px 40px 5px 40px;
+  display: inline-block;
+  opacity: 1;
+  transition: color 0.4s;
+  -webkit-transition: color 0.4s;
+}
+
+.header-font {
+  font-family: 'Ubuntu'
+}
+
+@media (max-width: 550px) {
+
+.light {
+  opacity: 0;
+  font-size: 1px;
+}
+
 }
