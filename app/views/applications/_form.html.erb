@@ -1,3 +1,4 @@
+<div class="jumbotron sponsorship-form">
 <%= form_for(sponsorship_application_path(@application.sponsorship_id, @application.id)) do |f| %>
   <% if @application.errors.any? %>
     <div id="error_explanation">
@@ -36,3 +37,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>

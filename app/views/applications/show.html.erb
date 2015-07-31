@@ -52,11 +52,13 @@
   <% end %>
 
 
-
-<%= link_to 'Back', sponsorship_applications_path %> | <%= link_to 'Destroy', sponsorship_application_path(@sponsorship.id, @application.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="container">
+<%= link_to 'Back', sponsorship_applications_path, class: 'btn btn-primary' %> | <%= link_to 'Destroy', sponsorship_application_path(@sponsorship.id, @application.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</div>
 
 <% end  %>
 
 <% if current_user.admin == false %>
 <%= link_to 'View Sponsponsorship', sponsorship_path(@sponsorship.id) %>
 <% end %>
+
