@@ -1,16 +1,20 @@
+<div class="container">
+
+<h1><%=@user.first_name%> <%=@user.last_name%></h1>
+  <div class="user-show">
+
 <p>
-  <strong>Name:</strong>
-  <%= @user.first_name %> <%= @user.last_name  %>
+  <span class="item-field">Name:</span>
+  <span class="item-name"><%= @user.first_name %> <%= @user.last_name  %></span>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  <span class="item-field">Email:</span> <span class="item-name"><%= @user.email %></span>
 </p>
 
 <p>
-  <strong>Admin Status:</strong>
-  <%= @user.admin? %>
+  <span class="item-field">Admin Status:</span>
+  <span class="item-name"><%= @user.admin? %></span>
 </p>
 
 
@@ -29,25 +33,30 @@
 <% end %>
 
 
-<% if @user.admin == true  %>
-  <h1>Company's Avalible Sponsorships</h1>
+<% if @user.admin == true && @user.sponsorships.any? %>
+  <h1 class="avail">Company's Avalible Sponsorships</h1>
   <% @user.sponsorships.each do |sponsorship| %>
-    <h2><%= sponsorship.sport %>: Level <%= sponsorship.level  %></h2>
+    <h3 class="sport"><%= sponsorship.sport %>: Level <%= sponsorship.level  %></h3>
     <p><% sponsorship.description %></p>
-    <h3>Rewards</h3>
+    <h3 class="sport">Rewards</h3>
       <ul>
         <% sponsorship.rewards.each do |reward| %>
-           <li> <%= reward.good %>: <%= reward.number_of_goods %> </li>
+           <li class="sport" id="list-item"> <%= reward.good %>: <%= reward.number_of_goods %> </li>
         <% end %>
       </ul>
 
 
-  <% end %>
+      <% end %>
+        <%elsif @user.admin == false%>
+        <h3>If you want to create a sponsorship, sign in as a company</h3>
+        <%else%>
+        No Available Sponsorships To Be Listed
 <% end %>
 
-
+</div>
 
 <% if current_user.id == @user.id %>
   <%= link_to 'Edit', edit_user_path(@user) %> |
 <% end %>
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path, class: 'btn btn-primary' %>
+</div>
