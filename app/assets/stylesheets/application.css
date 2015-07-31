@@ -299,7 +299,13 @@ outline: none;
   /*max-width: 300px;*/
   padding: 19px 29px 29px;
   /*margin: 0 auto 20px;*/
-  background-color: rgba(11, 10, 50, 0.2);
+  background-color: rgba(11, 10, 50, 0.6);
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 
 #athlete-title {
