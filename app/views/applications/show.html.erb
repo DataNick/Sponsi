@@ -22,22 +22,25 @@
 </div>
 <!-- Admin give sponsorship buttons -->
 <% if current_user.admin == true && @application.sponsorship.user_id == current_user.id %>
-
+<div class="container">
+<div class="rewards-spons">
+<h3>Rewards to be given</h3>
 <% @sponsorship.rewards.each do |reward| %>
 
   <%= reward.good %><br/>
   <%= reward.number_of_goods %><br/>
 
 <% end %>
-
+</div>
 <% if @application.approval == false  %>
   <%= form_for ([@sponsorship, @application]) do |f| %>
   <%= f.hidden_field :approval, value: true %>
   <div class="actions">
-    <%= f.submit "Sponsor Player", class:"submit-button", data: {disable_with: "Submitting..."} %>
+    <%= f.submit "Sponsor Player", class:" btn btn-success btn-block", data: {disable_with: "Submitting..."} %>
   </div>
   <% end %>
   <% end %>
+  </div>
 
   <% if @application.approval == true %>
   <%= form_for ([@sponsorship, @application]) do |f| %>

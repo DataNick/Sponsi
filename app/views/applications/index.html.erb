@@ -8,11 +8,12 @@
   <!-- Title -->
   <div class="row">
       <div class="col-lg-12">
-          <h3>Pending Applications</h3>
+          <h3 id="pend-app">Pending Applications</h3>
       </div>
   </div>
 
 <hr>
+    <div class="pending-form">
     <div class="row text-center">
     <% @sponsorship.applications.each do |application| %>
     <% if application.approval == false %>
@@ -32,17 +33,19 @@
       <% end %>
   <%end%>
 
+
 <br>
 
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
-                <h3>Approved Applications</h3>
+                <h3 id="pend-app">Approved Applications</h3>
             </div>
         </div>
 
         <hr>
   <div class="row text-center">
+
     <% @sponsorship.applications.each do |application| %>
     <% if application.approval == true %>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6  hero-feature">
@@ -58,7 +61,12 @@
                     </div>
                 </div>
             </div>
+            <%else%>
+            <p>No approved applications</p>
       <% end %>
     <% end %>
 <% end %>
+</div>
+</div>
+</div>
 </div>
