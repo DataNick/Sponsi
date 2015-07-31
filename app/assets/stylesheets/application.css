@@ -190,6 +190,73 @@ outline: none;
   padding: 7px 9px;
 }
 
+
+/*Application on sponsorship show page*/
+
+.show-application {
+    background-color: rgba(22, 122, 122, 0.5);s
+   -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  padding: 20px;
+}
+
+.show-application input[type="text"],
+.show-application input[type="email"],
+.show-application input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+#apply-title {
+  color: #ffffcc;
+  font-family: 'Amaranth', sans-serif;
+}
+
+/*Application show page*/
+.app-show  {
+  max-width: 500px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: rgba(122, 122, 70, 0.2);
+ /* border: 1px solid #e5e5e5;*/
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+
+}
+
+/*.app-show input[type="text"],
+.app-show input[type="email"],
+.app-show input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;*/
+
+
+#app {
+  font-family: 'Francois One', sans-serif;
+  color: #000099;
+
+  }
+
+  .col-centered {
+  float: none;
+  margin: 0 auto;
+
+}
+
+
+
 /*twitter bootstrap styling*/
 .border-form-div {
   max-width: 300px;

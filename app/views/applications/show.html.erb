@@ -1,20 +1,25 @@
-<p id="notice"><%= notice %></p>
 
+<p id="notice"><%= notice %></p>
+<h1 id="app" class="col-lg-4 col-centered">Application for <%=@application.name%></h1>
+<br>
+<br>
+<br>
+<div class="app-show">
 <p>
-  <strong>Name:</strong>
+  <strong id="title-form">Name:</strong>
   <%= @application.name %>
 </p>
 
-<p>
-  <strong>Sport:</strong>
+<p class="title-form">
+  <strong class="title-form">Sport:</strong>
   <%= @application.sport %>
 </p>
 
 <p>
-  <strong>Rank:</strong>
+  <strong class="title-form">Rank:</strong>
   <%= @application.rank %>
 </p>
-
+</div>
 <!-- Admin give sponsorship buttons -->
 <% if current_user.admin == true && @application.sponsorship.user_id == current_user.id %>
 

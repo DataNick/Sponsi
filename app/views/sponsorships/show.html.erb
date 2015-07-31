@@ -51,7 +51,14 @@ end
  %>
 
 <% if current_user.admin == false &&  @current_user_sponsorships_applied_to.include?(@sponsorship.id) == false %>
-<h2>Apply here</h2>
+<br>
+<br>
+<div class="show-application">
+
+
+<h2 id="apply-title">Apply here</h2>
+
+
 <%= form_for [@sponsorship, @application] do |f| %>
   <div class='field'>
     <%= f.label :name %><br/>
@@ -67,10 +74,10 @@ end
   </div>
   <%f.hidden_field :sponsorship_id, value: @sponsorship.id%>
   <div class='actions'>
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
   <% end %>
-
+</div>
 <% elsif current_user.admin == false &&  @current_user_sponsorships_applied_to.include?(@sponsorship.id) == true %>
   <% current_user.applications.each do |application|
     if application.sponsorship_id == @sponsorship.id
