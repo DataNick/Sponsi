@@ -292,6 +292,26 @@ outline: none;
      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
           box-shadow: 0 1px 2px rgba(0,0,0,.05);
 */
+}
+
+/*Users Index*/
+.users-index {
+  /*max-width: 300px;*/
+  padding: 19px 29px 29px;
+  /*margin: 0 auto 20px;*/
+  background-color: rgba(11, 10, 50, 0.2);
+}
+
+#athlete-title {
+font-family: 'Sigmar One', cursive;
+color: #E1F5E1;
+}
+
+#company-title {
+  font-family: 'Sigmar One', cursive;
+  color: #D6F5FF;
+}
+
 /*twitter bootstrap styling*/
 .border-form-div {
   max-width: 300px;
