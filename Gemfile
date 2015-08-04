@@ -34,6 +34,8 @@ gem 'pry-rails', :group => :development
 # gem 'unicorn'
 # sending email
 
+gem "figaro"
+
 gem 'mailcatcher', '~> 0.6.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
