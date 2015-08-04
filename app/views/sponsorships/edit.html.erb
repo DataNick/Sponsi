@@ -1,6 +1,60 @@
+<div class="container">
 <h1>Editing sponsorship</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @sponsorship %> |
-<%= link_to 'Back', sponsorships_path %>
+<div class="jumbotron sponsorship-form">
+<%= form_for(@sponsorship) do |f| %>
+<% if @sponsorship.errors.any? %>
+
+<div id="error_explanation">
+  <h2><%= pluralize(@sponsorship.errors.count, "error") %> prohibited this sponsorship from being saved:</h2>
+
+  <ul>
+    <% @sponsorship.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <br>
+  <%= f.text_field :sport, :class => "form-control", :placeholder => "Sport" %>
+</div>
+<div class="field">
+  <br>
+  <%= f.number_field :level, :class => "form-control", :placeholder => "Level (press up arrow button: 1 being pro, 10 is a pickup team)" %>
+</div>
+<div class="field">
+  <br>
+  <%= f.text_area :description, :class => "form-control", :placeholder => "Describe expectations from players and what players should expect from players" %>
+</div>
+<br/>
+
+<h2 id="reward-title">Rewards</h2>
+
+<% if @sponsorship.rewards.any?  %>
+  <%= f.fields_for :rewards do |reward_fields| %>
+    <%= render 'reward_fields', f: reward_fields %>
+  <% end %>
+<% end %>
+
+<div>
+  <%= link_to_add_association 'add reward', f, :rewards, class: 'btn btn-success' %>
+</div>
+
+
+<br/>
+
+<div class="action">
+  <%= f.submit class:'btn btn-success btn-block', :value => "Submit" %>
+</div>
+<% end %>
+
+
+
+<%= link_to 'Show', @sponsorship, class: 'btn btn-primary ' %>
+
+<%= link_to 'Back', sponsorships_path, class: 'btn btn-primary' %>
+</div>
+</div>
