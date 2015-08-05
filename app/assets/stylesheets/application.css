@@ -1,99 +1,99 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
 #reward-title {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
+font-family: 'Montserrat', sans-serif;
+color: white;
 }
 
 #reward-form-title {
-  font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
- #title-page {
-  font-family: 'Amaranth', sans-serif;
-  color: #FFFFCC;
- }
+#title-page {
+font-family: 'Amaranth', sans-serif;
+color: #FFFFCC;
+}
 
- #welcome-about {
+#welcome-about {
 font-family: 'Roboto', sans-serif;
 color: white;
 
- }
+}
 
 .modal-content {
-	background-image: url("CZICAIIEUI.jpg");
-	background-size: 100%;
-  background-position: center;
+background-image: url("CZICAIIEUI.jpg");
+background-size: 100%;
+background-position: center;
 }
 
 #text-comment-name {
-  width: 300px
+width: 300px
 }
 
 .company-signin {
-	background-image: url("B1E30E39B7.jpg");
-  background-size: cover;
+background-image: url("B1E30E39B7.jpg");
+background-size: cover;
 }
 
 .athlete-signin {
-  background-image: url("sunset-people-sun-men.jpg");
-	background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url("sunset-people-sun-men.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 #user_avatar {
-  color: white;
+color: white;
 }
 
 #pass-length {
-	color: #fff;
+color: #fff;
 }
 
 #logo-color {
-  color: #fff;
+color: #fff;
 }
 
 #welcome {
-  text-align: center;
-  display: inline-block;
-  width: 70%;
-  height: auto;
-  margin-left: 15%;
-  margin-right: auto;
-  margin-bottom: 20px;
-  color: gray;
+text-align: center;
+display: inline-block;
+width: 70%;
+height: auto;
+margin-left: 15%;
+margin-right: auto;
+margin-bottom: 20px;
+color: gray;
 
 }
 
 #background {
-  background-image: url("7I1KUVZ01H.jpg");
+background-image: url("7I1KUVZ01H.jpg");
 /*  width: auto;*/
-  /* -webkit-filter: blur(10px);
-    filter: blur(10px);*/
+/* -webkit-filter: blur(10px);
+filter: blur(10px);*/
 
-  background-size: cover;
-  max-width:100%;
-  max-height: 100%;
-  background-position: center;
+background-size: cover;
+max-width:100%;
+max-height: 100%;
+background-position: center;
 
 
 }
@@ -112,200 +112,199 @@ outline: none;
 /*sponsorship index*/
 
 .background-body {
-  background-image: url("concrete_seamless.png");
+background-image: url("concrete_seamless.png");
 }
 
 .caption {
-  background-color: #ccccff;
-  font-family: 'Amaranth', sans-serif;
-  color: #FFFFCC;
+background-color: #ccccff;
+font-family: 'Amaranth', sans-serif;
+color: #FFFFCC;
 }
 
 #pending-title {
-  font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
 #listing-title {
-  font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
 .sponsorship-form {
-  background-color: rgba(0, 0, 0, 0.5);s
-   -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+background-color: rgba(0, 0, 0, 0.5);s
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 
 .sponsorship-form input[type="text"],
 .sponsorship-form input[type="email"],
 .sponsorship-form input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
 }
 
 .index-spons {
-  background-color: rgba(0, 0, 0, 0.2);s
-   -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
-  padding: 40px;
+background-color: rgba(0, 0, 0, 0.2);s
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
+padding: 40px;
 }
 
 .index-form input[type="text"],
 .index-form input[type="email"],
 .index-form input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
 }
 
 
 /*sponsorship show*/
 .show-spons {
-    background-color: rgba(0, 0, 0, 0.1);s
-   -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
-  padding: 50px;
+background-color: rgba(0, 0, 0, 0.1);s
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
+padding: 50px;
 }
 
 .show-spons input[type="text"],
 .show-spons input[type="email"],
 .show-spons input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
 }
 
 
 /*Application on sponsorship show page*/
 
 .show-application {
-    background-color: rgba(22, 122, 122, 0.5);s
-   -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
-  padding: 20px;
+background-color: rgba(22, 122, 122, 0.5);s
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
+padding: 20px;
 }
 
 .show-application input[type="text"],
 .show-application input[type="email"],
 .show-application input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
 }
 
 #apply-title {
-  color: #ffffcc;
-  font-family: 'Amaranth', sans-serif;
+color: #ffffcc;
+font-family: 'Amaranth', sans-serif;
 }
 
 /*Application show page*/
 .app-show  {
-  max-width: 500px;
-  padding: 19px 29px 29px;
-  margin: 0 auto 20px;
-  background-color: rgba(122, 122, 70, 0.2);
- /* border: 1px solid #e5e5e5;*/
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+max-width: 500px;
+padding: 19px 29px 29px;
+margin: 0 auto 20px;
+background-color: rgba(122, 122, 70, 0.2);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
 
 }
 
 /*.app-show input[type="text"],
 .app-show input[type="email"],
 .app-show input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;*/
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;*/
 
 .rewards-spons {
-  max-width: 500px;
-  padding: 10px 29px 29px;
-  margin: 0 auto 20px;
-  background-color: rgba(222, 122, 70, 0.2);
- /* border: 1px solid #e5e5e5;*/
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+max-width: 500px;
+padding: 10px 29px 29px;
+margin: 0 auto 20px;
+background-color: rgba(222, 122, 70, 0.2);
+/* border: 1px solid #e5e5e5;*/
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
 
-  font-family: 'Amaranth', sans-serif;
+font-family: 'Amaranth', sans-serif;
 }
 
 
 #app {
-  font-family: 'Francois One', sans-serif;
-  color: #000099;
+font-family: 'Francois One', sans-serif;
+color: #000099;
 
-  }
+}
 
-  .col-centered {
-  float: none;
-  margin: 0 auto;
+.col-centered {
+float: none;
+margin: 0 auto;
 
 }
 
 /*Applications index*/
 
 #pend-app {
-  font-family: 'Amaranth', sans-serif;
-  color: #000099;
+font-family: 'Amaranth', sans-serif;
+color: #000099;
 }
 
 
 .pending-form {
-  /*max-width: 300px;*/
-  padding: 19px 29px 29px;
-  /*margin: 0 auto 20px;*/
-  background-color: rgba(22, 122, 70, 0.2);
- /* border: 1px solid #e5e5e5;*/
- /* -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+/*max-width: 300px;*/
+padding: 19px 29px 29px;
+/*margin: 0 auto 20px;*/
+background-color: rgba(22, 122, 70, 0.2);
+/* border: 1px solid #e5e5e5;*/
+/* -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
 */
 }
 
 /*Users Index*/
 .users-index {
-  /*max-width: 300px;*/
-  padding: 19px 29px 29px;
-  /*margin: 0 auto 20px;*/
-  background-color: rgba(11, 10, 50, 0.6);
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+/*max-width: 300px;*/
+padding: 19px 29px 29px;
+/*margin: 0 auto 20px;*/
+background-color: rgba(11, 10, 50, 0.6);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 
 #athlete-title {
@@ -314,120 +313,120 @@ color: #E1F5E1;
 }
 
 #company-title {
-  font-family: 'Sigmar One', cursive;
-  color: #D6F5FF;
+font-family: 'Sigmar One', cursive;
+color: #D6F5FF;
 }
 
 /*User show*/
 
 .user-show {
-  max-width: 1000px;
-  padding: 19px 29px 29px;
-  margin: 0 auto 20px;
-  background-color: rgba(0, 110, 110, 0.1);
- /* border: 1px solid #e5e5e5;*/
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+max-width: 1000px;
+padding: 19px 29px 29px;
+margin: 0 auto 20px;
+background-color: rgba(0, 110, 110, 0.1);
+/* border: 1px solid #e5e5e5;*/
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 
 .item-name {
-  font-family: 'Francois One', sans-serif;
-  font-size: 25px;
+font-family: 'Francois One', sans-serif;
+font-size: 25px;
 
 
 }
 
 .item-field {
-  font-family: 'Amaranth', sans-serif;
-  font-size: 25px;
-  color: blue;
+font-family: 'Amaranth', sans-serif;
+font-size: 25px;
+color: blue;
 }
 
 .avail {
-  font-family: 'Sigmar One', cursive;
+font-family: 'Sigmar One', cursive;
 }
 
 .sport {
-  font-family: 'Amaranth', sans-serif;
+font-family: 'Amaranth', sans-serif;
 
 }
 
 #list-item {
-  font-size: 24px;
+font-size: 24px;
 }
 /*twitter bootstrap styling*/
 .border-form-div {
-  max-width: 300px;
-  padding: 19px 29px 29px;
-  margin: 0 auto 20px;
-  background-color: rgba(0, 0, 0, 0.5);
- /* border: 1px solid #e5e5e5;*/
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+max-width: 300px;
+padding: 19px 29px 29px;
+margin: 0 auto 20px;
+background-color: rgba(0, 0, 0, 0.5);
+/* border: 1px solid #e5e5e5;*/
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 .border-form-div input[type="text"],
 .border-form-div input[type="email"],
 .border-form-div input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
 }
 
 .notice {
-  background-color: rgba(255,255,255,0.5);
-  text-align: center;
+background-color: rgba(255,255,255,0.5);
+text-align: center;
 }
 
 .alert {
-  background-color: :rgba(255,255,255,0.5);
-  text-align: center;
+background-color: :rgba(255,255,255,0.5);
+text-align: center;
 
 }
 
 .bold {
-    font-weight: 800;
+font-weight: 800;
 }
 
 
 /* Navbar */
 #hideBox {
-  display: none;
-  background-color: #fff;
-  width: 100%;
-  opacity: 0.85;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
+display: none;
+background-color: #fff;
+width: 100%;
+opacity: 0.85;
+border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 #pageTop {
-  margin: 15px 40px 5px 40px;
-  display: inline-block;
-  opacity: 1;
-  transition: color 0.4s;
-  -webkit-transition: color 0.4s;
+margin: 15px 40px 5px 40px;
+display: inline-block;
+opacity: 1;
+transition: color 0.4s;
+-webkit-transition: color 0.4s;
 }
 
 .header-font {
-  font-family: 'Ubuntu'
+font-family: 'Ubuntu'
 }
 
 @media (max-width: 550px) {
 
 .light {
-  opacity: 0;
-  font-size: 1px;
+opacity: 0;
+font-size: 1px;
 }
 
 }
