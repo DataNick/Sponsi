@@ -30,16 +30,16 @@
 <h3 id="reward-form-title" class="col-md-12 col-sm-12">Rewards</h3>
 
 <% @sponsorship.rewards.each do |reward| %>
-<p>
-  <%= reward.good %><br/>
-  <%= reward.number_of_goods %><br/>
+<p>The approved applicant receives
+  <%= reward.number_of_goods %>
+  <%= reward.good %>
   </p>
 <% end %>
 </div>
-
+<br/>
 <!-- Link to Applications -->
 <% if can?(:destroy, Application) %>
-<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id) %>
+<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id), class: 'btn btn-info' %>
 <% end %>
 
 
@@ -91,7 +91,7 @@ end
 
 <!-- Navigation -->
 <% if can?(:edit, Sponsorship) %>
-<%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |
+<%= link_to 'Edit', edit_sponsorship_path(@sponsorship), class: 'btn btn-primary' %> |
 <% end %>
+<%= link_to 'Back', sponsorships_path, class: 'btn btn-primary' %>
 </div>
-<%= link_to 'Back', sponsorships_path %>
