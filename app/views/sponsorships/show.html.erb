@@ -39,7 +39,7 @@
 <br/>
 <!-- Link to Applications -->
 <% if can?(:destroy, Application) %>
-<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id), class: 'btn btn-info' %>
+<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id), class: 'btn btn-info' %> | 
 <% end %>
 
 
@@ -91,7 +91,7 @@ end
 
 <!-- Navigation -->
 <% if can?(:edit, Sponsorship) %>
-<%= link_to 'Edit', edit_sponsorship_path(@sponsorship), class: 'btn btn-primary' %> |
+<%= link_to 'Edit', edit_sponsorship_path(@sponsorship), class: 'btn btn-default' %> |
 <% end %>
-<%= link_to 'Back', sponsorships_path, class: 'btn btn-primary' %>
+<%= link_to 'Back', sponsorships_path, class: 'btn btn-default' %>
 </div>

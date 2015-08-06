@@ -371,7 +371,8 @@ font-family: 'Amaranth', sans-serif;
 }
 
 #list-item {
-font-size: 24px;
+font-size: 18px;
+margin-bottom: 10px;
 }
 /*twitter bootstrap styling*/
 .border-form-div {
