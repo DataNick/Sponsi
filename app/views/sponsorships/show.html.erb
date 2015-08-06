@@ -36,10 +36,10 @@
   </p>
 <% end %>
 </div>
-
+<br/>
 <!-- Link to Applications -->
 <% if can?(:destroy, Application) %>
-<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id) %>
+<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id), class: 'btn btn-info' %>
 <% end %>
 
 
@@ -91,7 +91,7 @@ end
 
 <!-- Navigation -->
 <% if can?(:edit, Sponsorship) %>
-<%= link_to 'Edit', edit_sponsorship_path(@sponsorship) %> |
+<%= link_to 'Edit', edit_sponsorship_path(@sponsorship), class: 'btn btn-primary' %> |
 <% end %>
 <%= link_to 'Back', sponsorships_path, class: 'btn btn-primary' %>
 </div>
