@@ -11,61 +11,64 @@
       </div>
   </div>
 
-<hr>
-    <div class="pending-form">
+  <hr>
+  <div class="index-spons">
     <div class="row text-center">
-    <% @sponsorship.applications.each do |application| %>
-    <% if application.approval == false %>
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3><%= application.name  %></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <%= link_to 'Show', sponsorship_application_path(application.sponsorship_id, application.id), class:'btn btn-primary', style: 'color:#FFFFFF;' %>
-                            <%= link_to 'Destroy', sponsorship_application_path(application.sponsorship_id, application.id),class:'btn btn-danger', style: 'color:#FFFFFF;', method: :delete, data: { confirm: 'Are you sure?' } %>
-                        </p>
-                    </div>
+        <% @sponsorship.applications.each do |application| %>
+        <% if application.approval == false %>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 hero-feature">
+            <div class="thumbnail">
+                <%= image_tag application.user.avatar.url(:large) %>
+                <div class="caption">
+                    <h3><%= application.name  %></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>
+                        <%= link_to 'View', sponsorship_application_path(application.sponsorship_id, application.id), class:'btn btn-primary', style: 'color:#FFFFFF;' %>
+                        <%= link_to 'Reject', sponsorship_application_path(application.sponsorship_id, application.id),class:'btn btn-danger', style: 'color:#FFFFFF;', method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </p>
                 </div>
             </div>
-      <% end %>
-  <%end%>
+        </div>
+        <%else%>
+        <h4 class="text-center">No pending applications</h4>
+        <% end %>
+        <%end%>
+    </div>
+</div>
 
 
 <br>
 
-        <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 id="pend-app">Approved Applications</h3>
-            </div>
-        </div>
+<!-- Title -->
+<div class="row">
+    <div class="col-lg-12">
+        <h3 id="pend-app">Approved Applications</h3>
+    </div>
+</div>
 
-        <hr>
-  <div class="row text-center">
-
+<hr>
+<div class="approved-form">
+<div class="row text-center">
     <% @sponsorship.applications.each do |application| %>
     <% if application.approval == true %>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6  hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3><%= application.name  %></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <%= link_to 'Show', sponsorship_application_path(application.sponsorship_id, application.id), class:'btn btn-primary',style: 'color:#FFFFFF;' %>
-                            <%= link_to 'Destroy', sponsorship_application_path(application.sponsorship_id, application.id), class:'btn btn-danger', style: 'color:#FFFFFF;', method: :delete, data: { confirm: 'Are you sure?' }%>
-                        </p>
-                    </div>
-                </div>
+        <div class="thumbnail">
+                <%= image_tag application.user.avatar.url(:large) %>
+            <div class="caption">
+                <h3><%= application.name  %></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                    <%= link_to 'View', sponsorship_application_path(application.sponsorship_id, application.id), class:'btn btn-primary',style: 'color:#FFFFFF;' %>
+                    <%= link_to 'Reject', sponsorship_application_path(application.sponsorship_id, application.id), class:'btn btn-danger', style: 'color:#FFFFFF;', method: :delete, data: { confirm: 'Are you sure?' }%>
+                </p>
             </div>
-            <%else%>
-            <p>No approved applications</p>
-      <% end %>
+        </div>
+    </div>
+    <%else%>
+    <h4 class="text-center">No approved applications</h4>
     <% end %>
-<% end %>
+    <% end %>
+    <% end %>
 </div>
 </div>
-</div>
-</div>
+
