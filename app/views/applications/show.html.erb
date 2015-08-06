@@ -11,13 +11,48 @@
 </p>
 
 <p class="title-form">
+  <strong class="title-form">Age:</strong>
+  <%= @application.age %>
+</p>
+
+<p>
+  <strong class="title-form">Location:</strong>
+  <%= @application.location %>
+</p>
+
+<p>
   <strong class="title-form">Sport:</strong>
   <%= @application.sport %>
 </p>
 
 <p>
+  <strong class="title-form">Level:</strong>
+  <%= @application.level %>
+</p>
+
+<p>
   <strong class="title-form">Rank:</strong>
   <%= @application.rank %>
+</p>
+
+<p>
+  <strong class="title-form">Best Result:</strong>
+  <%= @application.best_result %>
+</p>
+
+<p>
+  <strong class="title-form">Plays/Trains at:</strong>
+  <%= @application.playing_at %>
+</p>
+
+<p>
+  <strong class="title-form">Description:</strong>
+  <%= @application.description %>
+</p>
+
+<p>
+  <strong class="title-form">What they are looking for:</strong>
+  <%= @application.looking_for %>
 </p>
 </div>
 <!-- Admin give sponsorship buttons -->
@@ -67,7 +102,8 @@
 
 <% end  %>
 
-<% if current_user.admin == false %>
-<%= link_to 'View Sponsponsorship', sponsorship_path(@sponsorship.id) %>
+<% if current_user.admin == false && current_user.id == @application.user.id %>
+<%= link_to 'View Sponsponsorship', sponsorship_path(@sponsorship.id), class:" btn btn-success col-xs-6 col-xs-offset-3" %> <br> <br>
+<%= link_to 'Delete Application', sponsorship_application_path(@sponsorship.id, @application.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger col-xs-6 col-xs-offset-3' %>
 <% end %>
 
