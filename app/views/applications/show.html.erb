@@ -32,6 +32,9 @@
 
 <% end %>
 </div>
+
+<div class="container">
+
 <% if @application.approval == false  %>
   <%= form_for ([@sponsorship, @application]) do |f| %>
   <%= f.hidden_field :approval, value: true %>
@@ -40,20 +43,26 @@
   </div>
   <% end %>
   <% end %>
-  </div>
+  <br>
+
+<%= link_to 'Back', sponsorship_applications_path, class: 'btn btn-primary' %>  <%= link_to 'Reject', sponsorship_application_path(@sponsorship.id, @application.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+
+<br>
+
+
+
+<br>
 
   <% if @application.approval == true %>
   <%= form_for ([@sponsorship, @application]) do |f| %>
   <%= f.hidden_field :approval, value: false %>
   <div class="actions">
-    <%= f.submit "Remove sponsorship", class:"submit-button", data: {disable_with: "Submitting..."} %>
+    <%= f.submit "Remove sponsorship", class:"submit-button btn btn-warning", data: {disable_with: "Submitting..."} %>
   </div>
   <% end %>
   <% end %>
 
 
-<div class="container">
-<%= link_to 'Back', sponsorship_applications_path, class: 'btn btn-primary' %> | <%= link_to 'Destroy', sponsorship_application_path(@sponsorship.id, @application.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 </div>
 
 <% end  %>
