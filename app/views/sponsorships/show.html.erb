@@ -30,9 +30,9 @@
 <h3 id="reward-form-title" class="col-md-12 col-sm-12">Rewards</h3>
 
 <% @sponsorship.rewards.each do |reward| %>
-<p>
-  <%= reward.good %><br/>
-  <%= reward.number_of_goods %><br/>
+<p>The approved applicant receives
+  <%= reward.number_of_goods %>
+  <%= reward.good %>
   </p>
 <% end %>
 </div>
