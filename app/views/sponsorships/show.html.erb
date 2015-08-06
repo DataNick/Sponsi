@@ -38,8 +38,10 @@
 </div>
 <br/>
 <!-- Link to Applications -->
-<% if can?(:destroy, Application) %>
-<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id), class: 'btn btn-info' %> | 
+
+<% if can?(:edit, Application) %>
+<%= link_to 'Applications', sponsorship_applications_path(@sponsorship.id), class: 'btn btn-info' %>
+
 <% end %>
 
 
@@ -60,18 +62,48 @@ end
 
 
 <%= form_for [@sponsorship, @application] do |f| %>
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sponsorship.application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% @sponsorship.application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class='field'>
-    <%= f.label :name %><br/>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control", :placeholder => "Applicant Name" %>
   </div>
   <div class='field'>
-    <%= f.label :sport %><br/>
-    <%= f.text_field :sport %>
+    <%= f.number_field :age, :class => "form-control", :placeholder => "How old is the applicant?" %>
   </div>
   <div class='field'>
-    <%= f.label :rank %><br/>
-    <%= f.number_field :rank %>
+    <%= f.text_field :location, :class => "form-control", :placeholder => "Where are you located?" %>
   </div>
+  <div class='field'>
+    <%= f.text_field :sport, :class => "form-control", :placeholder => "What sport do you play?" %>
+  </div>
+  <div class='field'>
+    <%= f.text_field :level, :class => "form-control", :placeholder => "What level do you play your sport?" %>
+  </div>
+  <div class='field'>
+    <%= f.number_field :rank, :class => "form-control", :placeholder => "What is your ranking?" %>
+  </div>
+  <div class='field'>
+    <%= f.text_field :best_result, :class => "form-control", :placeholder => "What was you best result in your sport?" %>
+  </div>
+  <div class='field'>
+    <%= f.text_field :playing_at, :class => "form-control", :placeholder => "Where do you play or train? (eg National Squash Academy)" %>
+  </div>
+  <div class='field'>
+    <%= f.text_field :description, :class => "form-control", :placeholder => "Tell us a little about yourself!" %>
+  </div>
+  <div class='field'>
+    <%= f.text_field :looking_for, :class => "form-control", :placeholder => "What do you want out of the sponsorship?" %>
+  </div>
+
   <%f.hidden_field :sponsorship_id, value: @sponsorship.id%>
   <div class='actions'>
     <%= f.submit class: 'btn btn-primary' %>
@@ -82,12 +114,13 @@ end
   <% current_user.applications.each do |application|
     if application.sponsorship_id == @sponsorship.id
     %>
-    <%= link_to 'View Your Application', sponsorship_application_path(application.sponsorship_id, application.id) %>
+    <%= link_to 'View Your Application', sponsorship_application_path(application.sponsorship_id, application.id), class:" btn btn-success"%>
     <% end %>
   <% end %>
 
 <% end %>
 
+<br><br>
 
 <!-- Navigation -->
 <% if can?(:edit, Sponsorship) %>

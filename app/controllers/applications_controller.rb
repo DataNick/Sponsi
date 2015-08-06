@@ -81,6 +81,6 @@ class ApplicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
-      params.require(:application).permit(:name, :sport, :rank, :approval)
+      params.require(:application).permit(:name, :sport, :rank, :approval, :description, :playing_at, :looking_for, :level, :best_result, :age, :location)
     end
 end
