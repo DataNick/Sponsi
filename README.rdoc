@@ -3,6 +3,23 @@
 Sponsi:
 
 Sponsi is a small app to look for and manage sponsorships of athletes and teams.
+The idea is to connect businesses that want to sponsor teams or individual athletes. Businesses can by provide equipment and resources to amateur athletes in need of equipment or money.
+
+The site is hosted on heroku at http://sponsi.herokuapp.com/
+
+Interesting tech used:
+
+Cocoon gem to provide an easier way to implement nested forms.
+User sign up handled by Devise.
+Image uploading feature is done by Paperclip gem.
+In order to ensure admin could monitor both businesses and athletes based on Administrative status, Cancan provided an easy to use interface for creating abilities for a particular user.
+
+Challenges:
+Since this was the first full-featured app I made with my co-creator, modelling out the rewards and ability objects where tricky. Figuring out the associations of having business grant rewards to athletes and connecting the logic to the frontend took time to do so in a user-friendly way.
+
+Next steps:
+
+Would like to connect to an S3 bucket to hold and persist images to user profiles.
+Update the front end with more interactive javascript animations to provide a cleaner user experience.
 
 
-<tt>rake doc:app</tt>.
